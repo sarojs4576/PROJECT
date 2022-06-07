@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdnlines.html' %}
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-4 col-md-4"><br>
+          <h1 class='text-center text-primary'>Please Login</h1>
+           <form method="POST">
+            {% csrf_token %}
+            <label>Enter Emailid</label>
+            <input type="email" name='email' class='form-control'>
+           <label>Enter Password </label>
+           <input type="password" name='password' class='form-control'><br>
+           <center>
+               <input type="submit" value="Submit" class='btn btn-outline-success'>
+               <input type="reset" value="Clear" class='btn btn-outline-warning'>
+             </center>
+          </form>
+       </div>
+      </div>
+    </div>
+  </body>
+</html>
